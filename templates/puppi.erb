@@ -353,7 +353,7 @@ while [ $# -gt 0 ]; do
       report="yes"
       export action=$1
       if [ -n "$2" ] ; then
-        echo "$2" | egrep -q "^-.$"
+        echo "$2" | egrep "^-.$"
         if [ "$?" != "0" ] ; then
           export project=$(shell_filter_strict $2)
           shift 2
